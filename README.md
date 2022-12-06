@@ -10,3 +10,5 @@
 
 ## 활용 라이브러리 & API
 - OpenWeather https://openweathermap.org/
+
+![image](https://user-images.githubusercontent.com/24298382/205860770-78868d92-16a6-4b30-ae13-6a21ef40d745.png)
