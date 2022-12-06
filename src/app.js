@@ -1,7 +1,7 @@
 // app.js
 const API_KEY = '179ceeb11c23a912fefd41421f453ea0';
 let city_name = 'seoul';
-const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`
+let API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`
 
 fetch(API_URL)
   .then(function(응답데이터){
