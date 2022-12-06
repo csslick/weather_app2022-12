@@ -11,8 +11,9 @@ fetch(API_URL)
   .then(function(data){
     console.log(data);
     showWeather(data)
+    // let copyArr = [...data];
+    // newArr = [...copyArr];
   })
-
 
 function showWeather(data) {
   const desc = data.weather[0].main; // 날씨상태 설명
@@ -28,7 +29,7 @@ function showWeather(data) {
   const descEl = document.querySelector('.desc');
 
   citynameEl.textContent = name;
-  iconEl.innerHTML = `<img src=${weather_icon} alt='아이콘'/>`
+  iconEl.innerHTML = `<img src='http://openweathermap.org/img/wn/${weather_icon}@2x.png' alt='아이콘'/>`
   tempEl.innerHTML = `${temp}&deg;`
   descEl.textContent = desc;
 }
