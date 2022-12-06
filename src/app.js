@@ -15,8 +15,6 @@ fetch(API_URL)
   .then(function(data){
     console.log(data);
     showWeather(data)
-    // let copyArr = [...data];
-    // newArr = [...copyArr];
   })
 
 function showWeather(data) {

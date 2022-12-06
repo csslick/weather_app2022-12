@@ -1,3 +1,9 @@
+body {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    linear-gradient(rgb(104, 185, 217), rgb(28, 72, 87));
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +16,12 @@ ul {
 
 [class ^= fa] {
   font-size: 10rem;
+  opacity: 0.75;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 #app {
@@ -19,8 +31,10 @@ ul {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100vh;
+  color: #fff;
 }
 
 .temp {
   margin-top: auto;
+  font-size: 5rem;
 }
