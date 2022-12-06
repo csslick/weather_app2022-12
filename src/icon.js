@@ -30,8 +30,8 @@ export const icons_fa = [
   '<i class="fas fa-snowflake"></i>', // 눈
   '<i class="fas fa-smog"></i>',
   // 밤
-  '<i class="fa-solid fa-moon-stars"></i>', // 달
-  '<i class="fa-solid fa-moon-cloud"></i>', // 달구름
+  '<i class="fas fa-sun"></i>', // 달
+  '<i class="fas fa-cloud-sun"></i>', // 달구름
   '<i class="fa-solid fa-cloud"></i>', // 구름
   '<i class="fa-solid fa-cloud"></i>',  // 구름많음
   '<i class="fas fa-cloud-showers-heavy"></i>', // 많은비
