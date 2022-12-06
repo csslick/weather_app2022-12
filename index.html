@@ -5,19 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>날씨 앱</title>
+  <!-- 아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="src/style.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
   <div id="app">
-    <h1>오늘의 날씨</h1>
+    <header>
+      <h1>오늘의 날씨</h1>
+      <h2 class="cityname">도시명</h2>
+    </header>
     <ul>
-      <li class="cityname">도시명</li>
       <li class="icon">img</li>
       <li class="temp"></li>
       <li class="desc">description</li>
     </ul>
   </div>
 
-  <script src="src/app.js"></script>
+  <script type="module" src="src/app.js"></script>
 </body>
 </html>
