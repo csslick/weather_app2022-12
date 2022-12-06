@@ -2,6 +2,9 @@
 
 // 아이콘 마이그레이션 데이터
 import { icons_origin, icons_fa } from './icon.js'
+// 현재 위치 가져오기
+// import { geoLocation } from './geoLocation.js';
+// console.log(geoLocation)
 
 const API_KEY = '179ceeb11c23a912fefd41421f453ea0';
 let city_name = 'seoul';
