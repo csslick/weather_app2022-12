@@ -1,7 +1,44 @@
 // app.js
+import { getLocation } from "./geoLocation.js";
+import { showPosition } from "./geolocation.js";
+import { getCurrentWeatherData } from "./geoLocation.js";
+
 const API_KEY = '179ceeb11c23a912fefd41421f453ea0';
 let city_name = 'seoul';
 let API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`
+
+// // 현재 위치
+// function getLocation() {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(showPosition);
+//   } else {
+//     x.innerHTML = "Geolocation is not supported by this browser.";
+//   }
+// }
+
+// function showPosition(position) {
+//   let pos = {
+//     lat: position.coords.latitude,
+//     lon: position.coords.longitude
+//   }
+
+//   getCurrentWeatherData(pos.lat, pos.lon)  
+// }
+
+// function getCurrentWeatherData(lat, lon) {
+//   // 도시명 업데이트
+//   API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+  
+//   fetch(API_URL)
+//   .then(function(응답데이터){
+//     return 응답데이터.json()
+//   })
+//   .then(function(data){
+//     console.log(data);
+//     showWeather(data)
+//   })
+
+// } // getCurrentWeatherData
 
 
 function getWeatherData(cityname = 'seoul') {
@@ -41,13 +78,14 @@ function showWeather(data) {
 
 
 // 날씨 함수 호출
-getWeatherData()
+// getWeatherData()
+getLocation();
 
 
 // 선택목록(도시명) 변경 이벤트
 const select = document.getElementById('select');
-select.addEventListener('change', function(e){
 
+select.addEventListener('change', function(e){
   const cityname = e.target.value
   getWeatherData(cityname)
 })
