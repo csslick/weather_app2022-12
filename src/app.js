@@ -3,8 +3,13 @@ const API_KEY = '179ceeb11c23a912fefd41421f453ea0';
 let city_name = 'seoul';
 let API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`
 
-// 서버에서 불러오는 작업은 비동기 처리(async)
-fetch(API_URL)
+
+function getWeatherData(cityname = 'seoul') {
+  // 도시명 업데이트
+  city_name = cityname;
+  API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`
+
+  fetch(API_URL)
   .then(function(응답데이터){
     return 응답데이터.json()
   })
@@ -13,6 +18,7 @@ fetch(API_URL)
     showWeather(data)
   })
 
+} // getWeatherData
 
 function showWeather(data) {
   const desc = data.weather[0].main; // 날씨상태 설명
@@ -32,3 +38,21 @@ function showWeather(data) {
   tempEl.innerHTML = `${temp}&deg;`
   descEl.textContent = desc;
 }
+
+
+// 날씨 함수 호출
+getWeatherData()
+
+
+// 선택목록(도시명) 변경 이벤트
+const select = document.getElementById('select');
+select.addEventListener('change', function(e){
+
+  const cityname = e.target.value
+  getWeatherData(cityname)
+})
+
+// 응용
+// 1. 날씨나 시간대(주간/야간)에 따라 배경 연출 바꾸기
+// 2. 아이콘을 다른 것으로 변경
+// 3. 기타 등등
