@@ -28,7 +28,7 @@ function showWeather(data) {
   const descEl = document.querySelector('.desc');
 
   citynameEl.textContent = name;
-  iconEl.innerHTML = `<img src=${weather_icon} alt='아이콘'/>`
+  iconEl.innerHTML = `<img src='http://openweathermap.org/img/wn/${weather_icon}@2x.png' alt='아이콘'/>`
   tempEl.innerHTML = `${temp}&deg;`
   descEl.textContent = desc;
 }

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#app {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  /* outline: 1px solid #333 */
+}
+
+#app h1 {
+  margin-bottom: 1em;
+  font-size: 2rem;
+}
+
+.cityname {
+  font-size: 3rem;
+}
+
+.temp {
+  font-size: 5rem;
+}
+
+.desc {
+  font-size: 2rem;
+}
+
+
