@@ -40,7 +40,6 @@ function showWeather(data) {
   descEl.textContent = desc;
 }
 
-
 // 날씨 함수 호출
 getWeatherData()
 
