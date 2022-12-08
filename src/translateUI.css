@@ -1,0 +1,38 @@
+ /*상단 플로팅 바 옵션 가리기  */
+ body { position: static !important; top:0px !important; }	
+ iframe.goog-te-banner-frame { display: none !important; }
+ .goog-logo-link { display:none !important; } 
+ .goog-te-gadget { color: transparent !important; overflow: hidden;} 
+ .goog-te-balloon-frame{display: none !important;} 
+
+
+/* 번역버튼 */
+#google_translate_element {
+
+}
+
+.goog-te-gadget {
+  /* outline: 2px solid #333; */
+  display: inline-block;
+  padding: 3px 5px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.goog-te-gadget, .goog-te-gadget-simple {
+  border-style: none !important;
+}
+
+.goog-te-gadget-simple img{
+  display: none;
+}
+
+
+.goog-te-menu-value span:nth-of-type(1) {
+  margin-right: 1rem;
+}
+
+.goog-te-menu-value span[style ^= border] {
+  display: none;
+}
+

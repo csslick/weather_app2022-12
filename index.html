@@ -7,10 +7,29 @@
   <title>날씨 앱</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="./src/translateUI.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- 구글번역 API -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ko,ja,en,fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  
+
   <div id="app">
-    <h1>오늘의 날씨</h1>
+    <header>
+      <div id="google_translate_element"></div>
+      <h1>오늘의 날씨</h1>
+    </header>
     <ul>
       <li class="cityname">도시명</li>
       <li class="icon">img</li>
@@ -28,5 +47,6 @@
   </div>
 
   <script src="src/app.js"></script>
+
 </body>
 </html>
