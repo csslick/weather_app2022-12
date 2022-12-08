@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 ul {
@@ -27,6 +28,7 @@ ul {
 #app h1 {
   margin-bottom: 1em;
   font-size: 2rem;
+  font-weight: 500;
 }
 
 .cityname {
