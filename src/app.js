@@ -34,7 +34,8 @@ function showWeather(data) {
   const descEl = document.querySelector('.desc');
 
   citynameEl.textContent = name;
-  iconEl.innerHTML = `<img src='http://openweathermap.org/img/wn/${weather_icon}@2x.png' alt='아이콘'/>`
+  // 이미지의 경로 수정
+  iconEl.innerHTML = `<img src='src/images/${weather_icon}.svg' alt='아이콘'/>`
   tempEl.innerHTML = `${temp}&deg;`
   descEl.textContent = desc;
 }
