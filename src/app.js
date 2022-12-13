@@ -56,3 +56,39 @@ select.addEventListener('change', function(e){
 // 1. 날씨나 시간대(주간/야간)에 따라 배경 연출 바꾸기
 // 2. 아이콘을 다른 것으로 변경
 // 3. 기타 등등
+
+
+// 현재위치
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  let pos = {
+    lat: position.coords.latitude,
+    lon: position.coords.longitude
+  }
+
+  getCurrentWeatherData(pos.lat, pos.lon)  
+}
+
+function getCurrentWeatherData(lat, lon) {
+  // 도시명 업데이트
+  API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+  
+  fetch(API_URL)
+  .then(function(응답데이터){
+    return 응답데이터.json()
+  })
+  .then(function(data){
+    console.log(data);
+    showWeather(data)
+  })
+
+} // getCurrentWeatherData
+
+getLocation();
